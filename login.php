@@ -16,6 +16,7 @@
             </ul>
         
             <label id="id"><input class="input" onclick="darkmode()" type="checkbox"><div class="magia"></div></label>
+            hola
         </div>
     </nav>
 </body>
