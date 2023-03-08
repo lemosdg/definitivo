@@ -1,3 +1,7 @@
+<?php
+        include "conn.php";
+?>
+
 <!DOCTYPE html>
 <html>
 <head>
@@ -10,18 +14,21 @@
         include "navlog.php";
     ?>
         <div class="formu">
-        <form action="login.php" method="POST">
+        <form action="" method="POST">
+        <?php
+            include "inicontrol.php";
+        ?>
             <h1>Iniciar sesion</h1>
             <p>
                 <label>Nombre de Usuario: </label>
-                <input type="text" name="">
+                <input type="text" name="user">
             </p>
             <p>
                 <label>Contraseña: </label>
-                <input type="password" name="">
+                <input type="password" name="pass">
             </p>
             <p class="boton">
-                <button type="submit" name="" value="Submit">Insertar</button>
+                <button type="submit" name="btningresar" value="Submit">Insertar</button>
             </p>
         </form>
     </div>
