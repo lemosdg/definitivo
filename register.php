@@ -1,3 +1,6 @@
+<?php
+    include "conn.php";
+?>
 <!DOCTYPE html>
 <html>
 <head>
@@ -10,19 +13,19 @@
         include "navlog.php";
     ?>
     <div class="formu">
-        <form action="login.php" method="POST">
+        <form action="regcontrol.php" method="POST">
             <h1>Registro</h1>
             <p>
                 <label>Nombre de Usuario: </label>
-                <input type="text" name="">
+                <input type="text" name="nameuser">
             </p>
             <p>
                 <label>Correo electronico: </label>
-                <input type="email" name="">
+                <input type="email" name="corruser">
             </p>
             <p>
                 <label>Contraseña: </label>
-                <input type="password" name="">
+                <input type="password" name="pass">
             </p>
             <p class="boton">
                 <button type="submit" name="" value="Submit">Insertar</button>
