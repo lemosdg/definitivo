@@ -65,3 +65,15 @@ img{
     align-items: center;
     padding-left: 500px;
 }
+
+.formu{
+    display: flex;
+    justify-content: center;
+}
+
+form{
+    margin-top: 8%;
+    background-color: azure;
+    padding: 30px;
+    border-radius: 7%;
+}

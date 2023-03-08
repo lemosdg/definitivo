@@ -9,5 +9,25 @@
     <?php
         include "navlog.php";
     ?>
+    <div class="formu">
+        <form action="login.php" method="POST">
+            <h1>Registro</h1>
+            <p>
+                <label>Nombre de Usuario: </label>
+                <input type="text" name="">
+            </p>
+            <p>
+                <label>Correo electronico: </label>
+                <input type="email" name="">
+            </p>
+            <p>
+                <label>Contraseña: </label>
+                <input type="password" name="">
+            </p>
+            <p class="boton">
+                <button type="submit" name="" value="Submit">Insertar</button>
+            </p>
+        </form>
+    </div>
 </body>
 </html>
