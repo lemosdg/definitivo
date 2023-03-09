@@ -1,7 +1,6 @@
-<header>
-
-</header>
 <nav>
+    <img class="logonav" src="img/favi.jpg" alt="logo">
+
     <ul class="ulnav">
         <li class="linav"><a href="inicio.php">Inicio</a></li>
         <li class="linav"><a href="">Perfil</a></li>

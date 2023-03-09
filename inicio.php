@@ -12,6 +12,16 @@
 </head>
 <body>
 <?php
+    $per = $conn -> query ('SELECT * from Usuario');
+    $valper = mysqli_fetch_array($per);
+
+    echo "<header>";
+    echo "<img class='perfilimg' src=".$valper['ImgUsuario'].">";
+    echo "<h2 class='pefilnombre'> ".$valper['Nombre']." </h2>";
+    echo "</header>";
+?>
+
+<?php
     include "navperfil.php";
 ?>
 
@@ -57,7 +67,7 @@
 <footer>
     <ul class="ulfooter">
         <a href="https://github.com/lemosdg"><li class="lifooter">
-            <img class="logo" src="imagenes/github.png" alt="github"><p>Github</p>
+            <img class="logo" src="img/github.png" alt="github"><p>Github</p>
         </li></a>
     </ul>
     <ul class="ulfooter">
