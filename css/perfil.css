@@ -1,0 +1,484 @@
+body{
+    background-color: rgb(11,22,34);
+    margin: 0;
+    font-family: Helvetica ,sans-serif;
+    font-size: 0.9em;
+}
+
+/* cabecera */
+header{
+    background-image: url(imagenes/baner.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 300px;
+    box-shadow: inset 0px -40px 30px 30px rgba(0, 0, 0, 0.2);
+}
+
+/* menu */
+
+nav{
+    z-index: 1;
+    position: sticky;
+    top: 0;
+    overflow: hidden;
+    background-color: rgb(21,31,46);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.linav1{
+    display: none;
+}
+
+.ulnav {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+}
+  
+.linav {
+    float: left;
+}
+  
+.linav > a {
+    display: block;
+    color: rgb(159,173,189);
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+}
+  
+.linav a:hover {
+    background-color: #111;
+}
+
+.active{
+    color: rgb(61,180,242) !important;
+}
+
+aside{
+    width: 100px;
+}
+
+.divsubmenu{
+    display: flex;
+    flex-direction: column;
+}
+
+.submenu{
+    padding: 10px;
+    border-radius: 4px;
+    color: rgb(159,173,189);
+}
+
+#activo{
+    background-color: rgb(21,31,46) !important;
+}
+
+/* caja juegos */
+
+main{
+    display: flex;
+    justify-content: center;
+}
+
+section{
+    display: flex;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+    width: 70%;
+}
+
+article{
+    background-color: rgb(21,31,46);
+    width: 400px;
+    height: 300px;
+    position: relative;
+    margin: 20px;
+}
+
+.imgjuego{
+    background-color: white;
+    width: 400px;
+    height: 250px;
+}
+
+.estado{
+    position: absolute;
+    margin: 5px;
+    background-color: rgb(8, 153, 8);
+    border-radius: 40px;
+    padding-left: 5px;
+    padding-right: 5px;
+}
+
+.veces{
+    position: absolute;
+    right: 0px;
+    margin: 5px;
+    background-color: rgb(8, 153, 8);
+    border-radius: 40px;
+    padding-left: 5px;
+    padding-right: 5px;
+}
+
+.nome{
+    color: white;
+    padding-left: 10px;
+    padding-right: 10px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.editimg{
+    width: 20px;
+    position: absolute;
+    bottom: 55px;
+    right: 10px;
+    display: none;
+    background-color: rgb(61,180,242);
+    padding: 5px;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+article:hover .editimg{
+    display: block;
+}
+
+/* darkmode */
+
+.darkmode{
+    background-color: white;
+}
+
+.input{
+    position: absolute;
+    left: -999px;
+    top: 0px;
+}
+
+label .magia{
+    border: 2px solid black;
+    background-color: white;
+    transition: all 1s;
+    width: 20px;
+    height: 20px;
+    position: absolute;
+    right: 10px;
+    top: 10px
+}
+
+.input:checked~.magia{
+    background-color: rgb(19, 17, 17);
+    transform: rotate(360deg);
+}
+
+/* footer */
+
+footer{
+    background-color: #11161d;
+    color: white;
+    display: flex;
+    justify-content: space-evenly;
+    margin-top: 40px;
+}
+
+.logo{
+    width: 35px;
+    height: 35px;
+}
+
+.ulfooter{
+    list-style-type: none;
+    padding: 0;
+    width: 200px;
+}
+
+.lifooter{
+    display: flex;
+    justify-content: left;
+    align-items: center;
+    padding: 5px;
+}
+
+a{
+    text-decoration: none;
+    color: white;
+}
+
+/* perfil */
+
+.allperfil{
+    display: flex;
+    justify-content: center;
+}
+
+.mainperfil{
+    width: 80%;
+    display: flex;
+    justify-content: center;
+}
+
+.secper1{
+    width: 40%;
+}
+
+.secper2{
+    margin-left: 30px;
+    width: 40%;
+}
+
+h3{
+    color: rgb(159,173,189);
+}
+
+h4{
+    color: rgb(61,180,242)
+}
+
+#calendario{
+    width: 400px;
+    display: grid;
+    grid-auto-flow: column dense;
+    grid-template-rows: repeat(7,1fr);
+    padding: 10px;
+    background-color: rgb(21,31,46);
+    border-radius: 4px;
+}
+
+.cal{
+    margin-top: 30px;
+    width: 100%;
+}
+
+.day{
+    width: 8px;
+    height: 8px;
+    background-color: blanchedalmond;
+    margin: 4px;
+    border-radius: 2px;
+    background-color: rgb(6,12,19);
+}
+
+.actperfil{
+    width: 80%;
+    height: 80px;
+    display: flex;
+    justify-content: space-between;
+    margin: 0;
+    color: rgb(159,173,189);
+    margin-bottom: 20px;
+    border-radius: 4px;
+}
+
+.ac-per{
+    width: 100%;
+    margin-top: 30px;
+}
+
+.act-1{
+    display: flex;
+}
+
+.act-2{
+    margin-left: 10px;
+}
+
+.fechaw{
+    margin-right: 10px;
+}
+
+.imgactividad{
+    width: 120px;
+    margin-right: 10px;
+    border-top-left-radius: 4px;
+    border-bottom-left-radius: 4px;
+}
+
+.estadistica{
+    width: 100%;
+}
+
+.cajastats{
+    display: flex;
+    justify-content: space-evenly;
+    background-color: rgb(21,31,46);
+    border-radius: 4px;
+}
+
+.cajastats > p{
+    color: white;
+}
+
+.barrastat{
+    display: flex;
+    height: 10px;
+}
+
+.bpasado{
+    background-color: rgb(8, 153, 8);
+    width: 45%;
+    height: 10px;
+}
+
+.bpasando{
+    background-color: rgb(226, 159, 34);
+    width: 25%;
+    height: 10px;
+}
+
+.bporpasar{
+    background-color: rgb(231, 40, 40);
+    width: 30%;
+    height: 10px;
+}
+
+.ppasado{
+    background-color: rgb(8, 153, 8);
+    padding: 5px;
+    border-radius: 4px;
+}
+
+.ppasando{
+    background-color: rgb(226, 159, 34);
+    padding: 5px;
+    border-radius: 4px;
+}
+
+.pporpas{
+    background-color: rgb(231, 40, 40);
+    padding: 5px;
+    border-radius: 4px;
+}
+
+.perfilimg{
+    width: 100px;
+    position: absolute;
+    margin-top: 200px;
+    margin-left: 200px;
+}
+
+.pefilnombre{
+    position: absolute;
+    margin-top: 260px;
+    margin-left: 350px;
+    color: white;
+}
+
+@media (max-width: 420px) {
+
+    nav{
+        width: 100%;
+        position: relative;
+        display: flex;
+        justify-content: left;
+    }
+
+    .ulnav{
+        width: 100%;
+    }
+
+    .linav{
+        display: none;
+    }
+
+    .linav1{
+        display: block;
+        width: 20px;
+        padding: 5px;
+        border-radius: 4px;
+        margin-left: 20px;
+    }
+
+    .resp{
+        background-color: rgb(61,180,242);
+        padding: 5px;
+        border-radius: 4px;
+    }
+
+    /* funcion menu */
+
+    .menu .linav{
+        display: block;
+    }
+
+    header{
+        display: none;
+    }
+
+    nav > label{
+        display: none;
+    }
+
+    .ulnav{
+        display: flex;
+        flex-direction: column;
+    }
+
+    /* cuerpo */
+    
+    main{
+        display: flex;
+        flex-direction: column;
+    }
+
+    section{
+        width: 100%;
+    }
+
+    article{
+        width: 100%;
+    }
+
+    /* perfil */
+
+    .allperfil{
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+    }
+
+    .mainperfil{
+        width: 100%;
+    }
+
+    .cal{
+        display: none;
+    }
+
+    .secper1, .secper2{
+        width: 100%;
+    }
+
+    .secper2{
+        margin-left: 0px;
+    }
+
+    .actperfil{
+        width: 100%;
+    }
+
+    .fechaw{
+        display: none;
+    }
+}
+
+/* ipad */
+
+@media (max-width: 1500px) {
+    .mainperfil{
+        display: flex;
+        flex-direction: column;
+    }
+
+    .secper1{
+        width: 60%;
+    }
+
+    .secper2{
+        width: 100%;
+    }
+}
