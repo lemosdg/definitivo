@@ -77,12 +77,28 @@ aside{
     background-color: rgb(21,31,46) !important;
 }
 
+.imgnav{
+    display: flex;
+    align-items: center;
+}
+
 .logonav{
     width: 40px;
     height: 40px;
     padding: 5px;
     margin-left: 15px;
     border-radius: 10px;
+}
+
+.logoutnav{
+    width: 20px;
+    height: 20px;
+    padding: 5px;
+    margin-left: 7px;
+}
+
+.logout:hover, .dark:hover {
+    cursor: pointer;
 }
 
 /* caja juegos */

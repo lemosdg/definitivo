@@ -7,8 +7,9 @@
 <html>
 <head>
   <title>Inicio</title>
-  <link href="css/perfil.css" rel="stylesheet" type="text/css" media="screen"/>
   <link rel="icon" type="image/jpg" href="img/favi.jpg" />
+  <link href="css/perfil.css" rel="stylesheet" type="text/css" media="screen"/>
+  <script src="js/perfil.js"></script>
 </head>
 <body>
 <?php
