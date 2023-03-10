@@ -1,7 +1,7 @@
 <nav>
     <div class="imgnav">
         <img class="logonav" src="img/favi.jpg" alt="logo">
-        <a class="logout" onclick="confirmarLogout()" href="logout.php"><img class="logoutnav" src="img/logout.png" alt="logout"></a>
+        <a class="logout" onclick="confirmarLogout()"><img class="logoutnav" src="img/logout.png" alt="logout"></a>
     </div>
     <ul class="ulnav">
         <li class="linav"><a href="inicio.php">Inicio</a></li>
