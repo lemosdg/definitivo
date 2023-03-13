@@ -12,5 +12,10 @@
         <li class="linav"><a href="">Social</a></li>
     </ul>
     <!-- darkmode -->
-    <label class="dark"><input class="input" onclick="darkmode()" type="checkbox"><div class="magia"></div></label>
+    <form action="buscar.php" method="get">
+        <input class="buscador" type="text" placeholder="Buscar...">
+        <button class="busbut">
+            <img class="logbuscar" src="img/lupa.png" alt="lupa">
+        </button>
+    </form>
 </nav>

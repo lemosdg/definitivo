@@ -13,7 +13,7 @@
 </head>
 <body>
 <?php
-    $per = $conn -> query ('SELECT * from Usuario');
+    $per = $conn -> query ('SELECT * from Usuario where idUsuario=' . $_SESSION['sesion'] . '');
     $valper = mysqli_fetch_array($per);
 
     echo "<header>";
