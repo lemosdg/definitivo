@@ -13,7 +13,7 @@
     </ul>
     <!-- darkmode -->
     <form action="buscar.php" method="get">
-        <input class="buscador" type="text" placeholder="Buscar...">
+        <input class="buscador" name="chain" type="text" placeholder="Buscar...">
         <button class="busbut">
             <img class="logbuscar" src="img/lupa.png" alt="lupa">
         </button>

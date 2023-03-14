@@ -16,9 +16,26 @@
 <?php
     include "navperfil.php";
 ?>
+<main>
+    <section>
+        <?php
+            $cadena = $_GET["chain"];
 
-
-
+            $query = $conn -> query ("SELECT * from juego where Nombre like '%$cadena%'");
+            while ($valores = $query->fetch_array()) {
+                            
+                echo "<article>";
+                echo "<div style='overflow:hidden'>";
+                echo "<img class='imgjuego' src=".$valores['ImgJuego'].">";
+                echo "</div>";
+                echo "<div class='nome'>";
+                echo "<p>".$valores['Nombre']."</p>";
+                echo "</div>";
+                echo "</article>";
+            }
+        ?>
+    </section>
+</main>
 <footer>
     <ul class="ulfooter">
         <a href="https://github.com/lemosdg"><li class="lifooter">
