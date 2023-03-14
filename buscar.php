@@ -30,6 +30,14 @@
                 echo "</div>";
                 echo "<div class='nome'>";
                 echo "<p>".$valores['Nombre']."</p>";
+                echo "<div class='dropdown'>";
+                echo "<button onclick='myFunction()' class='dropbtn'>Añadir a la lista</button>";
+                echo "<div id='myDropdown' class='dropdown-content'>";
+                echo "<a href='#'>Completado</a>";
+                echo "<a href='#'>Jugando</a>";
+                echo "<a href='#'>Paneo jugarlo</a>";
+                echo "</div>";
+                echo "</div>";    
                 echo "</div>";
                 echo "</article>";
             }
