@@ -23,7 +23,6 @@
 
             $query = $conn -> query ("SELECT * from juego where Nombre like '%$cadena%'");
             while ($valores = $query->fetch_array()) {
-                            
                 echo "<article>";
                 echo "<div style='overflow:hidden'>";
                 echo "<img class='imgjuego' src=".$valores['ImgJuego'].">";
@@ -33,9 +32,9 @@
                 echo "<div class='dropdown'>";
                 echo "<button onclick='myFunction()' class='dropbtn'>Añadir a la lista</button>";
                 echo "<div id='myDropdown' class='dropdown-content'>";
-                echo "<a href='#'>Completado</a>";
-                echo "<a href='#'>Jugando</a>";
-                echo "<a href='#'>Paneo jugarlo</a>";
+                echo "<a href='estado.php?valor=" . $valores['idJuego'] . "&estado=completado'>Completado</a>";
+                echo "<a href='estado.php?valor=" . $valores['idJuego'] . "&estado=jugando'>Jugando</a>";
+                echo "<a href='estado.php?valor=" . $valores['idJuego'] . "&estado=planeado'>Paneo jugarlo</a>";
                 echo "</div>";
                 echo "</div>";    
                 echo "</div>";
