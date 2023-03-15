@@ -58,6 +58,7 @@
                     echo "</div>";
                     echo "<div class='nome'>";
                     echo "<p>".$valores['Juego']."</p>";
+                    echo "<img class='editimg' src='img/edit.svg'>";
                     echo "</div>";
                     echo "</article>";
                 }
