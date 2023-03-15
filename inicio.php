@@ -36,9 +36,9 @@
         <h3>Filtro</h3>
         <div class="divsubmenu">
             <a class="submenu" href="inicio.php">Todos</a>
-            <a class="submenu" href="">Pasados</a>
-            <a class="submenu" href="">Pasando</a>
-            <a class="submenu" href="">Por pasar</a>
+            <a class="submenu" href="">Completados</a>
+            <a class="submenu" href="">Jugando</a>
+            <a class="submenu" href="">Planeados</a>
         </div>
     </aside>
     <section>
