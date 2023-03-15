@@ -26,3 +26,15 @@ window.onclick = function(event) {
     }
   }
 }
+
+// deplegar ventana emergente
+
+function mostrarFormulario(idJuego) {
+  var formulario = document.getElementById(idJuego);
+  formulario.style.display = "block";
+  console.log(idJuego);
+}
+function ocultarVentanaEmergente(idJuego) {
+  document.getElementById(idJuego).style.display = "none";
+}
+

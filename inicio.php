@@ -42,28 +42,60 @@
         </div>
     </aside>
     <section>
-    <?php
-                $query = $conn -> query ('SELECT a.Juego_idJuego, a.Nota, j.Nombre Juego,  j.ImgJuego Imagen
-                FROM juego_has_usuario a
-                JOIN juego j
-                ON a.Juego_idJuego = j.idJuego
-                where a.Usuario_idUsuario= '. $_SESSION['sesion'] .';');
-                while ($valores = mysqli_fetch_array($query)) {
-                    
-                    echo "<article>";
-                    echo "<div style='overflow:hidden'>";
-                    echo "<p style='background-color:rgb(8, 153, 8)' class='estado'>pasado</p>";
-                    echo "<p style='display: block' class='veces'>1</p>";
-                    echo "<img class='imgjuego' src=".$valores['Imagen'].">";
-                    echo "</div>";
-                    echo "<div class='nome'>";
-                    echo "<p>".$valores['Juego']."</p>";
-                    echo "<img class='editimg' src='img/edit.svg'>";
-                    echo "</div>";
-                    echo "</article>";
-                }
-            ?>
+        <?php
+            $query = $conn -> query ('SELECT a.Juego_idJuego, a.Nota, a.Estado, j.Nombre Juego,  j.ImgJuego Imagen
+            FROM juego_has_usuario a
+            JOIN juego j
+            ON a.Juego_idJuego = j.idJuego
+            where a.Usuario_idUsuario= '. $_SESSION['sesion'] .';');
+            while ($valores = mysqli_fetch_array($query)) {
+                echo "<article>";
+                echo "<div style='overflow:hidden'>";
+                echo "<p style='background-color:rgb(8, 153, 8)' class='estado'>pasado</p>";
+                echo "<p style='display: block' class='veces'>1</p>";
+                echo "<img class='imgjuego' src=".$valores['Imagen'].">";
+                echo "</div>";
+                echo "<div class='nome'>";
+                echo "<p>".$valores['Juego']."</p>";
+                echo "<img onclick='mostrarFormulario(".$valores['Juego_idJuego'].")' class='editimg' src='img/edit.svg'>";
+                echo "</div>";
+                echo "</article>";
+
+                // ventana desplegable para editar
+
+                echo "<div id=".$valores['Juego_idJuego']." class='editar' style='display:none;'>";
+                echo '<div class="tituloedit">';
+                echo "    <img class='caratula' src=".$valores['Imagen'].">";
+                echo "    <h3>".$valores['Juego']."</h3>";
+                echo '</div>';
+                echo '<form method="post" action="edit.php">';
+                echo "<input type='hidden' name='idjuego' value=".$valores['Juego_idJuego'].">";
+                echo '    <div class="formuedit">';
+                echo '        <div>';
+                echo '            <label for="estado">Estado</label><br>';
+                echo '            <select name="estado">';
+                echo "                <option value='completado'>Completado</option>";
+                echo "                <option value='jugando'>Jugando</option>";
+                echo "                <option value='planeado'>Planeado</option>";
+                echo '            </select>';
+                echo '        </div>';
+                echo '       <div>';
+                echo '            <label for="nota">Nota</label><br>';
+                echo "            <input type='number' name='nota' value=".$valores['Nota'].">";
+                echo '        </div>';
+                echo '    </div>';
+                echo '    <div class="botones">';
+                echo '        <input name="guardar" type="submit" value="Guardar cambios">';
+                echo '        <input name="eliminar" type="submit" value="Eliminar Juego" class="eliminar">';
+                echo '    </div>';
+                echo "    <input class='cerrar' type='button' value='X' onclick='ocultarVentanaEmergente(".$valores['Juego_idJuego'].")'>";
+                echo '</form>';
+                echo '</div>';
+            }
+
+        ?>
     </section>
+    
 </main>
 
 <footer>

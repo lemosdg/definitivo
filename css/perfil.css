@@ -205,6 +205,61 @@ article:hover .editimg{
     display: block;
 }
 
+/* Formulario de editar */
+
+.editar{
+    position: absolute;
+    top: 33%;
+    left: 36%;
+    background-color: rgb(54, 187, 28);
+    z-index: 5;
+    padding-top: 30px;
+    width: 30%;
+    height: 40%;
+}
+
+.tituloedit, .formuedit{
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    padding-bottom: 30px;
+}
+
+.tituloedit > h3{
+    color: black;
+}
+
+.caratula{
+    width: 100px;
+    height: 130px;
+    margin-left: -25px;
+}
+
+.formuedit{
+    display: flex;
+    justify-content: space-evenly;
+}
+
+.botones{
+    position: absolute;
+    bottom: 0;
+    right: 0;
+}
+
+.eliminar{
+    background-color: red;
+}
+
+.cerrar{
+    position: absolute;
+    top: 0;
+    right: 0;
+}
+
+.cerrar:hover{
+    background-color: red;
+}
+
 /* desplegable */
 
 .dropbtn {
