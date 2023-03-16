@@ -43,7 +43,11 @@
                 <?php
                     $url = $_SERVER['QUERY_STRING'];
                     parse_str($url, $params);
-                    $filtro = $params['filtro'];
+                    if (!empty($params['filtro'])){
+                        $filtro = $params['filtro'];
+                    } elseif (empty($params['filtro'])){
+                        $filtro = 'todos';
+                    }
                 ?>
             </div>
         </form>
