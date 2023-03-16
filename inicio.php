@@ -36,20 +36,45 @@
         <h3>Filtro</h3>
         <form action="">
             <div class="divsubmenu">
-                <button type="submit" class="submenu styled-button" name="todos" value="Submit">Todos</button>
-                <button type="submit" class="submenu styled-button" name="completados" value="Submit">Completados</button>
-                <button type="submit" class="submenu styled-button" name="jugando" value="Submit">Jugando</button>
-                <button type="submit" class="submenu styled-button" name="planeados" value="Submit">Planeados</button>
+                <button type="submit" class="submenu styled-button" name="filtro" value="todos">Todos</button>
+                <button type="submit" class="submenu styled-button" name="filtro" value="completado">Completados</button>
+                <button type="submit" class="submenu styled-button" name="filtro" value="jugando">Jugando</button>
+                <button type="submit" class="submenu styled-button" name="filtro" value="planeado">Planeados</button>
+                <?php
+                    $url = $_SERVER['QUERY_STRING'];
+                    parse_str($url, $params);
+                    $filtro = $params['filtro'];
+                ?>
             </div>
         </form>
     </aside>
     <section>
         <?php
-            $query = $conn -> query ('SELECT a.Juego_idJuego, a.Nota, a.Estado, j.Nombre Juego,  j.ImgJuego Imagen
-            FROM juego_has_usuario a
-            JOIN juego j
-            ON a.Juego_idJuego = j.idJuego
-            where a.Usuario_idUsuario= '. $_SESSION['sesion'] .';');
+            if ($filtro=='completado'){
+                $query = $conn -> query ('SELECT a.Juego_idJuego, a.Nota, a.Estado, j.Nombre Juego,  j.ImgJuego Imagen
+                FROM juego_has_usuario a
+                JOIN juego j
+                ON a.Juego_idJuego = j.idJuego
+                where a.Usuario_idUsuario= '. $_SESSION['sesion'] .' and estado in ("completado");');
+            } elseif ($filtro=='jugando'){
+                $query = $conn -> query ('SELECT a.Juego_idJuego, a.Nota, a.Estado, j.Nombre Juego,  j.ImgJuego Imagen
+                FROM juego_has_usuario a
+                JOIN juego j
+                ON a.Juego_idJuego = j.idJuego
+                where a.Usuario_idUsuario= '. $_SESSION['sesion'] .' and estado in ("jugando");');
+            } elseif ($filtro=='planeado'){
+                $query = $conn -> query ('SELECT a.Juego_idJuego, a.Nota, a.Estado, j.Nombre Juego,  j.ImgJuego Imagen
+                FROM juego_has_usuario a
+                JOIN juego j
+                ON a.Juego_idJuego = j.idJuego
+                where a.Usuario_idUsuario= '. $_SESSION['sesion'] .' and estado in ("planeado");');
+            } else{
+                $query = $conn -> query ('SELECT a.Juego_idJuego, a.Nota, a.Estado, j.Nombre Juego,  j.ImgJuego Imagen
+                FROM juego_has_usuario a
+                JOIN juego j
+                ON a.Juego_idJuego = j.idJuego
+                where a.Usuario_idUsuario= '. $_SESSION['sesion'] .';');
+            }
             while ($valores = mysqli_fetch_array($query)) {
                 echo "<article>";
                 echo "<div style='overflow:hidden'>";
