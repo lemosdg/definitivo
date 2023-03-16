@@ -51,8 +51,8 @@
             while ($valores = mysqli_fetch_array($query)) {
                 echo "<article>";
                 echo "<div style='overflow:hidden'>";
-                echo "<p style='background-color:rgb(8, 153, 8)' class='estado'>pasado</p>";
-                echo "<p style='display: block' class='veces'>1</p>";
+                echo "<p class='estado'>".$valores['Estado']."</p>";
+                echo "<p style='display: block' class='nota'>".$valores['Nota']."</p>";
                 echo "<img class='imgjuego' src=".$valores['Imagen'].">";
                 echo "</div>";
                 echo "<div class='nome'>";
