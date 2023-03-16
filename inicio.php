@@ -105,19 +105,19 @@
                 echo '        <div class="nameinser">';
                 echo '            <label class="label" for="estado">Estado</label>';
                 if ($valores['Estado']=='completado'){
-                    echo '            <select name="estado">';
+                    echo '            <select class="selec" name="estado">';
                     echo "                <option value='completado' selected>Completado</option>";
                     echo "                <option value='jugando'>Jugando</option>";
                     echo "                <option value='planeado'>Planeado</option>";
                     echo '            </select>';
                 } elseif ($valores['Estado']=='jugando'){
-                    echo '            <select name="estado">';
+                    echo '            <select class="selec" name="estado">';
                     echo "                <option value='completado'>Completado</option>";
                     echo "                <option value='jugando' selected>Jugando</option>";
                     echo "                <option value='planeado'>Planeado</option>";
                     echo '            </select>';
                 } elseif ($valores['Estado']=='planeado'){
-                    echo '            <select name="estado">';
+                    echo '            <select class="selec" name="estado">';
                     echo "                <option value='completado'>Completado</option>";
                     echo "                <option value='jugando'>Jugando</option>";
                     echo "                <option value='planeado' selected>Planeado</option>";
