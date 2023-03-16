@@ -104,11 +104,25 @@
                 echo '    <div class="formuedit">';
                 echo '        <div>';
                 echo '            <label for="estado">Estado</label><br>';
-                echo '            <select name="estado">';
-                echo "                <option value='completado'>Completado</option>";
-                echo "                <option value='jugando'>Jugando</option>";
-                echo "                <option value='planeado'>Planeado</option>";
-                echo '            </select>';
+                if ($valores['Estado']=='completado'){
+                    echo '            <select name="estado">';
+                    echo "                <option value='completado selected'>Completado</option>";
+                    echo "                <option value='jugando'>Jugando</option>";
+                    echo "                <option value='planeado'>Planeado</option>";
+                    echo '            </select>';
+                } elseif ($valores['Estado']=='jugando'){
+                    echo '            <select name="estado">';
+                    echo "                <option value='completado'>Completado</option>";
+                    echo "                <option value='jugando' selected>Jugando</option>";
+                    echo "                <option value='planeado'>Planeado</option>";
+                    echo '            </select>';
+                } elseif ($valores['Estado']=='planeado'){
+                    echo '            <select name="estado">';
+                    echo "                <option value='completado'>Completado</option>";
+                    echo "                <option value='jugando'>Jugando</option>";
+                    echo "                <option value='planeado' selected>Planeado</option>";
+                    echo '            </select>';
+                }
                 echo '        </div>';
                 echo '       <div>';
                 echo '            <label for="nota">Nota</label><br>';
