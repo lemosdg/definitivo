@@ -34,12 +34,14 @@
 <main>
     <aside>
         <h3>Filtro</h3>
-        <div class="divsubmenu">
-            <a class="submenu" href="inicio.php">Todos</a>
-            <a class="submenu" href="">Completados</a>
-            <a class="submenu" href="">Jugando</a>
-            <a class="submenu" href="">Planeados</a>
-        </div>
+        <form action="">
+            <div class="divsubmenu">
+                <button type="submit" class="submenu styled-button" name="todos" value="Submit">Todos</button>
+                <button type="submit" class="submenu styled-button" name="completados" value="Submit">Completados</button>
+                <button type="submit" class="submenu styled-button" name="jugando" value="Submit">Jugando</button>
+                <button type="submit" class="submenu styled-button" name="planeados" value="Submit">Planeados</button>
+            </div>
+        </form>
     </aside>
     <section>
         <?php

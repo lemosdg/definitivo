@@ -73,6 +73,19 @@ aside{
     color: rgb(159,173,189);
 }
 
+.styled-button {
+    border: none;
+    background-color: transparent;
+    cursor: pointer;
+    padding: 8px;
+    text-align: left;
+    font-size: medium;
+}
+  
+.styled-button:hover {
+    text-decoration: none;
+}
+
 #activo{
     background-color: rgb(21,31,46) !important;
 }
