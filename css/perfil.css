@@ -7,11 +7,29 @@ body{
 
 /* cabecera */
 header{
-    background-image: url(imagenes/baner.jpg);
-    background-repeat: no-repeat;
-    background-size: cover;
     height: 300px;
     box-shadow: inset 0px -40px 30px 30px rgba(0, 0, 0, 0.2);
+}
+
+.baner{
+    position: absolute;
+    height: 300px;
+    width: 100%;
+    z-index: -1;
+}
+
+.perfilimg{
+    width: 100px;
+    position: absolute;
+    margin-top: 200px;
+    margin-left: 200px;
+}
+
+.pefilnombre{
+    position: absolute;
+    margin-top: 260px;
+    margin-left: 350px;
+    color: white;
 }
 
 /* menu */
@@ -557,20 +575,6 @@ h4{
     background-color: rgb(231, 40, 40);
     padding: 5px;
     border-radius: 4px;
-}
-
-.perfilimg{
-    width: 100px;
-    position: absolute;
-    margin-top: 200px;
-    margin-left: 200px;
-}
-
-.pefilnombre{
-    position: absolute;
-    margin-top: 260px;
-    margin-left: 350px;
-    color: white;
 }
 
 @media (max-width: 420px) {

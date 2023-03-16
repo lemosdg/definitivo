@@ -17,6 +17,7 @@
     $valper = mysqli_fetch_array($per);
 
     echo "<header>";
+    echo "<img class='baner' src=".$valper['ImgUsuario'].">";
     echo "<img class='perfilimg' src=".$valper['ImgUsuario'].">";
     echo "<h2 class='pefilnombre'> ".$valper['Nombre']." </h2>";
     echo "</header>";
