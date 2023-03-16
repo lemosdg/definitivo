@@ -265,13 +265,20 @@ article:hover .editimg{
     margin-bottom: 10px;
 }
 
-.selec{
+.selec, .not{
     border: none;
     background-color: rgb(11,22,34);
     color: rgb(114,138,161);
     padding: 10px;
-    width: 180px;
     border-radius: 5px;
+}
+
+.selec{
+    width: 200px;
+}
+
+.not{
+    width: 120px;
 }
 
 .botones{

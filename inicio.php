@@ -126,7 +126,7 @@
                 echo '        </div>';
                 echo '       <div class="nameinser">';
                 echo '            <label class="label" for="nota">Nota</label>';
-                echo "            <input type='number' name='nota' value=".$valores['Nota'].">";
+                echo "            <input type='number' min='0' max='10' name='nota' value=".$valores['Nota']." class='not'>";
                 echo '        </div>';
                 echo '    </div>';
                 echo '    <div class="botones">';
