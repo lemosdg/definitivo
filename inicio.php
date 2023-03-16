@@ -102,11 +102,11 @@
                 echo '<form method="post" action="edit.php">';
                 echo "<input type='hidden' name='idjuego' value=".$valores['Juego_idJuego'].">";
                 echo '    <div class="formuedit">';
-                echo '        <div>';
-                echo '            <label for="estado">Estado</label><br>';
+                echo '        <div class="nameinser">';
+                echo '            <label class="label" for="estado">Estado</label>';
                 if ($valores['Estado']=='completado'){
                     echo '            <select name="estado">';
-                    echo "                <option value='completado selected'>Completado</option>";
+                    echo "                <option value='completado' selected>Completado</option>";
                     echo "                <option value='jugando'>Jugando</option>";
                     echo "                <option value='planeado'>Planeado</option>";
                     echo '            </select>';
@@ -124,14 +124,14 @@
                     echo '            </select>';
                 }
                 echo '        </div>';
-                echo '       <div>';
-                echo '            <label for="nota">Nota</label><br>';
+                echo '       <div class="nameinser">';
+                echo '            <label class="label" for="nota">Nota</label>';
                 echo "            <input type='number' name='nota' value=".$valores['Nota'].">";
                 echo '        </div>';
                 echo '    </div>';
                 echo '    <div class="botones">';
-                echo '        <input name="guardar" type="submit" value="Guardar cambios">';
                 echo '        <input name="eliminar" type="submit" value="Eliminar Juego" class="eliminar">';
+                echo '        <input name="guardar" type="submit" value="Guardar cambios" class="guardar">';
                 echo '    </div>';
                 echo "    <input class='cerrar' type='button' value='X' onclick='ocultarVentanaEmergente(".$valores['Juego_idJuego'].")'>";
                 echo '</form>';
